@@ -53,7 +53,7 @@ class Post(models.Model):
         return os.path.basename(self.file_upload.name)
 
     def get_file_ext(self):
-        return self.get_File_name().split('.')[-1]
+        return self.get_file_name().split('.')[-1]
 
     def get_content_markdown(self):
         return markdown(self.content)
